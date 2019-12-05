@@ -10,6 +10,7 @@ src/qt/moc.*
 src/qt/*.moc
 src/qt/test/moc*.cpp
 src/qt/test/test_gridcoin-qt
+src/build*
 
 contrib/deprecated
 contrib/deprecated/bin

@@ -488,3 +488,7 @@ contains(RELEASE, 1) {
 !windows:!macx: LIBS += -lrt
 
 system($$QMAKE_LRELEASE -silent $$_PRO_FILE_)
+
+DISTFILES += \
+    src/qt/forms/TestForm.ui.qml \
+    src/qt/forms/Test.qml

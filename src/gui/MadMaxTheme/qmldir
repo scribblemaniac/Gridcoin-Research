@@ -1,0 +1,2 @@
+module MadMaxTheme
+singleton MadMaxTheme 1.0 MadMaxTheme.qml
