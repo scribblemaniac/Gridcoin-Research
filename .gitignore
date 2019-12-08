@@ -11,6 +11,8 @@ src/qt/*.moc
 src/qt/test/moc*.cpp
 src/qt/test/test_gridcoin-qt
 
+*build-*
+
 contrib/deprecated
 contrib/deprecated/bin
 release
