@@ -1,0 +1,3 @@
+module MMPTheme
+plugin mmpthemeplugin
+classname MMPThemePlugin
