@@ -7,14 +7,14 @@ CONFIG += c++11 plugin
 DESTDIR = ../../imports/MMPTheme
 TARGET = mmpthemeplugin
 
-DISTFILES += \
-    qmldir
-
 HEADERS += \
     mmpthemeplugin.h
 
 SOURCES += \
     mmpthemeplugin.cpp
+
+#DISTFILES += \
+    #qmldir
 
 qmldir.files = qmldir
 qmldir.path = $$DESTDIR

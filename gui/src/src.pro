@@ -1,6 +1,7 @@
 TEMPLATE = app
 QT += quick
 CONFIG += c++11
+TARGET = GridcoinGUI
 
 # The following define makes your compiler emit warnings if you use
 # any Qt feature that has been marked deprecated (the exact warnings
@@ -16,14 +17,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp
 
-RESOURCES += qml.qrc
+RESOURCES += \
+    ../plugins/themes.qrc \
+    qml.qrc
 
-DESTDIR = $$OUT_PWD/../imports
-
-#LIBS += -L$$OUT_PWD/../imports
+#DESTDIR = ../
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
-QML_IMPORT_PATH = $$PWD/../plugins
+QML_IMPORT_PATH = $$OUT_PWD/../imports
 
 # Additional import path used to resolve QML modules just for Qt Quick Designer
 QML_DESIGNER_IMPORT_PATH =
@@ -32,3 +33,6 @@ QML_DESIGNER_IMPORT_PATH =
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    qtquickcontrols2.conf
