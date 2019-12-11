@@ -8,10 +8,17 @@ DESTDIR = ../../imports/MMPTheme
 TARGET = mmpthemeplugin
 
 HEADERS += \
-    mmpthemeplugin.h
+    mmpthemeplugin.h \
+    mmptheme.h \
+    mmpthemeattachedtype.h
 
 SOURCES += \
-    mmpthemeplugin.cpp
+    mmpthemeplugin.cpp \
+    mmptheme.cpp \
+    mmpthemeattachedtype.cpp
+
+RESOURCES += \
+    resources.qrc
 
 #DISTFILES += \
     #qmldir
