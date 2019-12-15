@@ -20,9 +20,12 @@ SOURCES += \
 RESOURCES += \
     resources.qrc
 
+OTHER_FILES += ../themes.qrc
+
 #DISTFILES += \
     #qmldir
 
 qmldir.files = qmldir
 qmldir.path = $$DESTDIR
 COPIES += qmldir
+

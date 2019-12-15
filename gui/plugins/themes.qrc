@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>MMPTheme/Label.qml</file>
+        <file>MMPTheme/CheckBox.qml</file>
     </qresource>
 </RCC>

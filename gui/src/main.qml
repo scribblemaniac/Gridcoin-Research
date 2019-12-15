@@ -7,9 +7,27 @@ Window {
     visible: true
     width: 640
     height: 480
-    title: qsTr("Hello World")
+    title: qsTr("Component Styling Test")
 
-    Label {
-        text: qsTr("Hello, world")
+    color: MMPTheme.background
+
+    Column {
+        id: column
+        spacing: 5
+        padding: 5
+        anchors.fill: parent
+
+        CheckBox {
+            text: qsTr("Selected")
+            checked: true
+        }
+
+        CheckBox {
+            text: qsTr("Normal")
+        }
+
+        CheckBox {
+            text: qsTr("Hover")
+        }
     }
 }

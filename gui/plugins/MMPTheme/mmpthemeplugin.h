@@ -11,6 +11,7 @@ public:
     explicit MMPThemePlugin(QObject *parent = nullptr);
 
     void registerTypes(const char *uri) override;
+    void initializeEngine(QQmlEngine *engine, const char *uri) override;
 };
 
 #endif // MMPTHEMEPLUGIN_H

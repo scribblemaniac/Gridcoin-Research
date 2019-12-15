@@ -32,3 +32,27 @@ void MMPThemeAttachedType::resetMode()
     //m_mode = Mode::Light;
     qDebug() << "Resetting" << m_mode;
 }
+
+QColor MMPThemeAttachedType::getTextColor() const
+{
+    switch(mode()) {
+    case Mode::Light:
+        return getColorOxfordBlue();
+    case Mode::Dark:
+        return getColorWhite();
+    default:
+        return getColorMissing();
+    }
+}
+
+QColor MMPThemeAttachedType::getBackground() const
+{
+    switch(mode()) {
+    case Mode::Light:
+        return getColorLilyWhite();
+    case Mode::Dark:
+        return getColorSpaceBlack();
+    default:
+        return getColorMissing();
+    }
+}
