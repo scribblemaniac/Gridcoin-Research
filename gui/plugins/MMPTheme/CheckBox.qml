@@ -26,25 +26,23 @@ T.CheckBox {
         x: control.text ? (control.mirrored ? control.width - width - control.rightPadding : control.leftPadding) : control.leftPadding + (control.availableWidth - width) / 2
         y: control.topPadding + (control.availableHeight - height) / 2
 
-        color: control.checked ? MMPTheme.sw("#b39013fe", "#4a90e2") : "#ffffff"
+        color: control.checked ? MMPTheme.sw(MMPTheme.translucent(MMPTheme.cBluePurple, 0.7), MMPTheme.cHavelockBlue) : MMPTheme.cMissing
 
         border.width: 1
-        border.color: control.checked ? MMPTheme.sw("#7a33c6", "#3362ad") : (control.active ? "#6b7383" : "#b6bac3")
+        border.color: MMPTheme.combine(MMPTheme.translucent(MMPTheme.cOxfordBlue, control.active ? 0.7 : 0.3), control.checked ? MMPTheme.sw(MMPTheme.cBluePurple, MMPTheme.cHavelockBlue) : MMPTheme.cWhite)
         radius: 4
 
         Image {
             x: (parent.width - width) / 2
             y: (parent.height - height) / 2
-            width: 16
-            height: 16
             source: "qrc:/resources/icons/generic/ic_checkbox_tick.svg"
             visible: control.checked
         }
 
         property Gradient backgroundGradient: Gradient {
             orientation: Gradient.Vertical
-            GradientStop { position: 0; color: control.active ? "#ffffff" : "#eaeded" }
-            GradientStop { position: 1; color: control.active ? "#eaeded" : "#ffffff" }
+            GradientStop { position: 0; color: control.active ? MMPTheme.cWhite : MMPTheme.cLilyWhite }
+            GradientStop { position: 1; color: control.active ? MMPTheme.cLilyWhite : MMPTheme.cWhite }
         }
 
         gradient: !control.checked ? backgroundGradient : null

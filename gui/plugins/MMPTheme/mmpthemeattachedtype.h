@@ -24,6 +24,7 @@ class MMPThemeAttachedType : public QObject
     Q_PROPERTY(QColor cHavelockBlue READ getColorHavelockBlue CONSTANT FINAL)
     Q_PROPERTY(QColor cDullLime READ getColorDullLime CONSTANT FINAL)
     Q_PROPERTY(QColor cCarminePink READ getColorCarminePink CONSTANT FINAL)
+    Q_PROPERTY(QColor cMissing READ getColorMissing CONSTANT FINAL)
 
     // Read-Only Properties
     Q_PROPERTY(QFont font READ getFont CONSTANT FINAL)
@@ -40,6 +41,8 @@ public:
     explicit MMPThemeAttachedType(QObject *parent = nullptr);
 
     Q_INVOKABLE QString sw(QString lightObj, QString darkObj) const;
+    Q_INVOKABLE QColor translucent(QColor color, double opacity) const;
+    Q_INVOKABLE QColor combine(QColor top, QColor bottom) const;
 
     Mode mode() const;
     void setMode(Mode m);

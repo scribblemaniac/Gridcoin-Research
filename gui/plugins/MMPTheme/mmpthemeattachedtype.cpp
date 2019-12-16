@@ -15,6 +15,27 @@ QString MMPThemeAttachedType::sw(QString lightObj, QString darkObj) const
     return m_mode == Mode::Light ? lightObj : darkObj;
 }
 
+QColor MMPThemeAttachedType::translucent(QColor color, double opacity) const
+{
+    color.setAlphaF(opacity);
+    return color;
+}
+
+QColor MMPThemeAttachedType::combine(QColor top, QColor bottom) const
+{
+    // Algorithm for alpha compositing taken from here:
+    // https://stackoverflow.com/questions/28900598/how-to-combine-two-colors-with-varying-alpha-values
+    QColor newColor;
+    qreal c1 = (1-top.alphaF())*bottom.alphaF();
+    qreal c2 = top.alphaF();
+    qreal newAlpha = c1 + c2;
+    newColor.setRedF((c1*bottom.redF()+c2*top.redF())/newAlpha);
+    newColor.setGreenF((c1*bottom.greenF()+c2*top.greenF())/newAlpha);
+    newColor.setBlueF((c1*bottom.blueF()+c2*top.blueF())/newAlpha);
+    newColor.setAlphaF(newAlpha);
+    return newColor;
+}
+
 MMPThemeAttachedType::Mode MMPThemeAttachedType::mode() const
 {
     qDebug() << "Returning" << m_mode;
