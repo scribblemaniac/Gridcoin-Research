@@ -29,3 +29,6 @@ qmldir.files = qmldir
 qmldir.path = $$DESTDIR
 COPIES += qmldir
 
+DISTFILES += \
+    SpinBox.qml
+

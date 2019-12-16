@@ -17,6 +17,28 @@ Window {
 
         Column {
             GroupBox {
+                title: qsTr("SpinBox")
+                Column {
+                    spacing: 5
+                    padding: 5
+                    anchors.fill: parent
+
+                    SpinBox {
+                        value: 50
+                    }
+
+                    SpinBox {
+                        value: 50
+                    }
+
+                    SpinBox {
+                        value: 50
+                        enabled: false
+                    }
+                }
+            }
+
+            GroupBox {
                 title: qsTr("CheckBox")
                 Column {
                     spacing: 5

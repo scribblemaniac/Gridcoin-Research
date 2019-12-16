@@ -48,6 +48,8 @@ public:
     Mode mode() const;
     void setMode(Mode m);
     void resetMode();
+    Q_INVOKABLE bool isLightMode() { return m_mode == Mode::Light; }
+    Q_INVOKABLE bool isDarkMode() { return m_mode == Mode::Dark; }
 signals:
     void modeChanged();
     void textColorChanged();

@@ -4,5 +4,6 @@
         <file>MMPTheme/CheckBox.qml</file>
         <file>MMPTheme/RadioButton.qml</file>
         <file>MMPTheme/TextField.qml</file>
+        <file>MMPTheme/SpinBox.qml</file>
     </qresource>
 </RCC>
