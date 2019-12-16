@@ -2,5 +2,6 @@
     <qresource prefix="/">
         <file>MMPTheme/Label.qml</file>
         <file>MMPTheme/CheckBox.qml</file>
+        <file>MMPTheme/RadioButton.qml</file>
     </qresource>
 </RCC>

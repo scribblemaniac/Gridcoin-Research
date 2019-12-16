@@ -12,22 +12,48 @@ Window {
     color: MMPTheme.background
 
     Column {
-        id: column
-        spacing: 5
-        padding: 5
-        anchors.fill: parent
+        GroupBox {
+            title: qsTr("CheckBox")
+            Column {
+                spacing: 5
+                padding: 5
+                anchors.fill: parent
 
-        CheckBox {
-            text: qsTr("Selected")
-            checked: true
+                CheckBox {
+                    text: qsTr("Selected")
+                    checked: true
+                }
+
+                CheckBox {
+                    text: qsTr("Normal")
+                }
+
+                CheckBox {
+                    text: qsTr("Hover")
+                }
+            }
         }
 
-        CheckBox {
-            text: qsTr("Normal")
-        }
+        GroupBox {
+            title: qsTr("RadioButton")
+            Column {
+                spacing: 5
+                padding: 5
+                anchors.fill: parent
 
-        CheckBox {
-            text: qsTr("Hover")
+                RadioButton {
+                    text: qsTr("Selected")
+                    checked: true
+                }
+
+                RadioButton {
+                    text: qsTr("Normal")
+                }
+
+                RadioButton {
+                    text: qsTr("Hover")
+                }
+            }
         }
     }
 }
