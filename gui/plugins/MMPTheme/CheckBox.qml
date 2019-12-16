@@ -41,8 +41,8 @@ T.CheckBox {
 
         property Gradient backgroundGradient: Gradient {
             orientation: Gradient.Vertical
-            GradientStop { position: 0; color: control.active ? MMPTheme.cWhite : MMPTheme.cLilyWhite }
-            GradientStop { position: 1; color: control.active ? MMPTheme.cLilyWhite : MMPTheme.cWhite }
+            GradientStop { position: 0; color: control.active ? MMPTheme.cLilyWhite : MMPTheme.cWhite }
+            GradientStop { position: 1; color: control.active ? MMPTheme.cWhite : MMPTheme.cLilyWhite }
         }
 
         gradient: !control.checked ? backgroundGradient : null
