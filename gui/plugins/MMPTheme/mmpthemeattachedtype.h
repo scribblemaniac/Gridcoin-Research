@@ -72,7 +72,7 @@ private:
     QColor getColorCarminePink() const { return QColor(237, 81, 68); }
     QColor getColorMissing() const { return Qt::magenta; }
 
-    QFont getFont() const { return QFont("qrc:/resources/fonts/SF Pro Text/SF-Pro-Text-Regular.otf", 9); }
+    QFont getFont() const { return QFont("SF Pro Text", 9); }
     QColor getTextColor() const;
     QColor getBackground() const;
 

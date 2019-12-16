@@ -14,9 +14,15 @@ Window {
     ScrollView {
         id: scrollView
         anchors.fill: parent
+        width: parent.width
 
         Column {
+            anchors.fill: parent
+            spacing: 15
+            padding: 15
+
             GroupBox {
+                width: scrollView.width - 2*parent.padding
                 title: qsTr("SpinBox")
                 Column {
                     spacing: 5
@@ -39,6 +45,7 @@ Window {
             }
 
             GroupBox {
+                width: scrollView.width - 2*parent.padding
                 title: qsTr("CheckBox")
                 Column {
                     spacing: 5
@@ -62,6 +69,7 @@ Window {
             }
 
             GroupBox {
+                width: scrollView.width - 2*parent.padding
                 title: qsTr("RadioButton")
                 Column {
                     spacing: 5
@@ -85,6 +93,7 @@ Window {
             }
 
             GroupBox {
+                width: scrollView.width - 2*parent.padding
                 title: qsTr("TextField")
                 Column {
                     spacing: 5

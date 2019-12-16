@@ -30,5 +30,6 @@ qmldir.path = $$DESTDIR
 COPIES += qmldir
 
 DISTFILES += \
-    SpinBox.qml
+    SpinBox.qml \
+    GroupBox.qml
 
