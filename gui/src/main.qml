@@ -11,47 +11,89 @@ Window {
 
     color: MMPTheme.background
 
-    Column {
-        GroupBox {
-            title: qsTr("CheckBox")
-            Column {
-                spacing: 5
-                padding: 5
-                anchors.fill: parent
+    ScrollView {
+        id: scrollView
+        anchors.fill: parent
 
-                CheckBox {
-                    text: qsTr("Selected")
-                    checked: true
-                }
+        Column {
+            GroupBox {
+                title: qsTr("CheckBox")
+                Column {
+                    spacing: 5
+                    padding: 5
+                    anchors.fill: parent
 
-                CheckBox {
-                    text: qsTr("Normal")
-                }
+                    CheckBox {
+                        text: qsTr("Selected")
+                        checked: true
+                    }
 
-                CheckBox {
-                    text: qsTr("Hover")
+                    CheckBox {
+                        text: qsTr("Normal")
+                    }
+
+                    CheckBox {
+                        text: qsTr("Hover")
+                        active: true
+                    }
                 }
             }
-        }
 
-        GroupBox {
-            title: qsTr("RadioButton")
-            Column {
-                spacing: 5
-                padding: 5
-                anchors.fill: parent
+            GroupBox {
+                title: qsTr("RadioButton")
+                Column {
+                    spacing: 5
+                    padding: 5
+                    anchors.fill: parent
 
-                RadioButton {
-                    text: qsTr("Selected")
-                    checked: true
+                    RadioButton {
+                        text: qsTr("Selected")
+                        checked: true
+                    }
+
+                    RadioButton {
+                        text: qsTr("Normal")
+                    }
+
+                    RadioButton {
+                        text: qsTr("Hover")
+                        active: true
+                    }
                 }
+            }
 
-                RadioButton {
-                    text: qsTr("Normal")
-                }
+            GroupBox {
+                title: qsTr("TextField")
+                Column {
+                    spacing: 5
+                    padding: 5
+                    anchors.fill: parent
 
-                RadioButton {
-                    text: qsTr("Hover")
+                    TextField {
+                        text: qsTr("Default")
+                    }
+
+                    TextField {
+                        text: qsTr("Active")
+                    }
+
+                    TextField {
+                        text: qsTr("Disabled")
+                        enabled: false
+                    }
+
+                    TextField {
+                        placeholderText: qsTr("Placeholder Default")
+                    }
+
+                    TextField {
+                        placeholderText: qsTr("Placeholder Active")
+                    }
+
+                    TextField {
+                        placeholderText: qsTr("Placeholder Disabled")
+                        enabled: false
+                    }
                 }
             }
         }

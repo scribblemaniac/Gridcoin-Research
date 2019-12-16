@@ -53,7 +53,7 @@ T.CheckBox {
         rightPadding: control.indicator && control.mirrored ? control.indicator.width + control.spacing : 0
 
         text: control.text
-        font.family: MMPTheme.font.family
+        font: MMPTheme.font
         color: MMPTheme.textColor
     }
 }

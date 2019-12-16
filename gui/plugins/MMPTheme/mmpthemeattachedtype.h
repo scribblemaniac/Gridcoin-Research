@@ -15,6 +15,7 @@ class MMPThemeAttachedType : public QObject
     Q_PROPERTY(QColor cSpaceBlack READ getColorSpaceBlack CONSTANT FINAL)
     Q_PROPERTY(QColor cMobster READ getColorMobster CONSTANT FINAL)
     Q_PROPERTY(QColor cOxfordBlue READ getColorOxfordBlue CONSTANT FINAL)
+    Q_PROPERTY(QColor cOxfordOffBlue READ getColorOxfordOffBlue CONSTANT FINAL)
     Q_PROPERTY(QColor cLightSlateGray READ getColorLightSlateGray CONSTANT FINAL)
     Q_PROPERTY(QColor cLilyWhite READ getColorLilyWhite CONSTANT FINAL)
     Q_PROPERTY(QColor cFrostWhite READ getColorFrostWhite CONSTANT FINAL)
@@ -57,6 +58,7 @@ private:
     QColor getColorSpaceBlack() const { return QColor(26, 38, 50); }
     QColor getColorMobster() const { return QColor(23, 27, 36); }
     QColor getColorOxfordBlue() const { return QColor(58, 70, 93); }
+    QColor getColorOxfordOffBlue() const { return QColor(23, 34, 44); }
     QColor getColorLightSlateGray() const { return QColor(115, 131, 161); }
     QColor getColorLilyWhite() const { return QColor(234, 237, 237); }
     QColor getColorFrostWhite() const { return QColor(244, 247, 249); }
@@ -68,7 +70,7 @@ private:
     QColor getColorCarminePink() const { return QColor(237, 81, 68); }
     QColor getColorMissing() const { return Qt::magenta; }
 
-    QFont getFont() const { return QFont("qrc:/resources/fonts/SF Pro Text/SF-Pro-Text-Regular.otf"); }
+    QFont getFont() const { return QFont("qrc:/resources/fonts/SF Pro Text/SF-Pro-Text-Regular.otf", 9); }
     QColor getTextColor() const;
     QColor getBackground() const;
 
