@@ -6,5 +6,6 @@
         <file>MMPTheme/TextField.qml</file>
         <file>MMPTheme/SpinBox.qml</file>
         <file>MMPTheme/GroupBox.qml</file>
+        <file>MMPTheme/ComboBox.qml</file>
     </qresource>
 </RCC>

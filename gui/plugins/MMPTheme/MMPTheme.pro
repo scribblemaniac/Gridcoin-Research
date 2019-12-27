@@ -28,8 +28,3 @@ OTHER_FILES += ../themes.qrc
 qmldir.files = qmldir
 qmldir.path = $$DESTDIR
 COPIES += qmldir
-
-DISTFILES += \
-    SpinBox.qml \
-    GroupBox.qml
-

@@ -127,6 +127,25 @@ Window {
                     }
                 }
             }
+
+            GroupBox {
+                width: scrollView.width - 2*parent.padding
+                title: qsTr("ComboBox")
+                Column {
+                    spacing: 5
+                    padding: 5
+                    anchors.fill: parent
+
+                    ComboBox {
+                        model: [qsTr("Focused"), qsTr("Default")]
+                    }
+
+                    ComboBox {
+                        model: [qsTr("Disabled")]
+                        enabled: false
+                    }
+                }
+            }
         }
     }
 }
