@@ -23,6 +23,60 @@ Window {
 
             GroupBox {
                 width: scrollView.width - 2*parent.padding
+                title: qsTr("TextArea")
+                Column {
+                    spacing: 5
+                    padding: 5
+                    anchors.fill: parent
+
+                    TextArea {
+                        text: qsTr("This\nis\nfocused\ntextarea")
+                    }
+
+                    TextArea {
+                        text: qsTr("This\nis\ndefault\ntextarea")
+                    }
+
+                    TextArea {
+                        text: qsTr("This\nis\ndisabled\ntextarea")
+                        enabled: false
+                    }
+
+                    ScrollView {
+                        height: 24*4
+                        width: 200
+                        TextArea {
+                            text: qsTr("This\nis\na\nscrollable\nplaceholder\ntextarea")
+                        }
+                    }
+
+                    TextArea {
+                        placeholderText: qsTr("This\nis\nplaceholder\ntextarea")
+                    }
+                }
+            }
+
+            GroupBox {
+                width: scrollView.width - 2*parent.padding
+                title: qsTr("ComboBox")
+                Column {
+                    spacing: 5
+                    padding: 5
+                    anchors.fill: parent
+
+                    ComboBox {
+                        model: [qsTr("Focused"), qsTr("Default")]
+                    }
+
+                    ComboBox {
+                        model: [qsTr("Disabled")]
+                        enabled: false
+                    }
+                }
+            }
+
+            GroupBox {
+                width: scrollView.width - 2*parent.padding
                 title: qsTr("SpinBox")
                 Column {
                     spacing: 5
@@ -123,25 +177,6 @@ Window {
 
                     TextField {
                         placeholderText: qsTr("Placeholder Disabled")
-                        enabled: false
-                    }
-                }
-            }
-
-            GroupBox {
-                width: scrollView.width - 2*parent.padding
-                title: qsTr("ComboBox")
-                Column {
-                    spacing: 5
-                    padding: 5
-                    anchors.fill: parent
-
-                    ComboBox {
-                        model: [qsTr("Focused"), qsTr("Default")]
-                    }
-
-                    ComboBox {
-                        model: [qsTr("Disabled")]
                         enabled: false
                     }
                 }
