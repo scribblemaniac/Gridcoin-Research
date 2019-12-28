@@ -23,6 +23,49 @@ Window {
 
             GroupBox {
                 width: scrollView.width - 2*parent.padding
+                title: qsTr("Button")
+
+                Grid {
+                    spacing: 5
+                    padding: 5
+                    anchors.fill: parent
+
+                    columns: 3
+
+                    Button {
+                        text: qsTr("Default")
+                    }
+
+                    Button {
+                        text: qsTr("Default")
+                        icon.source: MMPTheme.sw("qrc:/resources/icons/buttons/ic_btn_verify_light.svg", "qrc:/resources/icons/buttons/ic_btn_verify_dark.svg")
+                    }
+
+                    Button {
+                        icon.source: MMPTheme.sw("qrc:/resources/icons/buttons/ic_btn_verify_light.svg", "qrc:/resources/icons/buttons/ic_btn_verify_dark.svg")
+                    }
+
+
+                    Button {
+                        text: qsTr("Disabled")
+                        enabled: false
+                    }
+
+                    Button {
+                        text: qsTr("Disabled")
+                        icon.source: MMPTheme.sw("qrc:/resources/icons/buttons/ic_btn_verify_light.svg", "qrc:/resources/icons/buttons/ic_btn_verify_dark.svg")
+                        enabled: false
+                    }
+
+                    Button {
+                        icon.source: MMPTheme.sw("qrc:/resources/icons/buttons/ic_btn_verify_light.svg", "qrc:/resources/icons/buttons/ic_btn_verify_dark.svg")
+                        enabled: false
+                    }
+                }
+            }
+
+            GroupBox {
+                width: scrollView.width - 2*parent.padding
                 title: qsTr("TextArea")
                 Column {
                     spacing: 5
@@ -184,3 +227,7 @@ Window {
         }
     }
 }
+
+
+
+

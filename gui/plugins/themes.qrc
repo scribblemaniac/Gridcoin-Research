@@ -8,5 +8,6 @@
         <file>MMPTheme/GroupBox.qml</file>
         <file>MMPTheme/ComboBox.qml</file>
         <file>MMPTheme/TextArea.qml</file>
+        <file>MMPTheme/Button.qml</file>
     </qresource>
 </RCC>

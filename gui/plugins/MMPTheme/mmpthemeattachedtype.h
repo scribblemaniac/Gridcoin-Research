@@ -20,6 +20,7 @@ class MMPThemeAttachedType : public QObject
     Q_PROPERTY(QColor cLilyWhite READ getColorLilyWhite CONSTANT FINAL)
     Q_PROPERTY(QColor cFrostWhite READ getColorFrostWhite CONSTANT FINAL)
     Q_PROPERTY(QColor cWhite READ getColorWhite CONSTANT FINAL)
+    Q_PROPERTY(QColor cBlack READ getColorBlack CONSTANT FINAL)
     Q_PROPERTY(QColor cViolentViolet READ getColorViolentViolet CONSTANT FINAL)
     Q_PROPERTY(QColor cBluePurple READ getColorBluePurple CONSTANT FINAL)
     Q_PROPERTY(QColor cHavelockBlue READ getColorHavelockBlue CONSTANT FINAL)
@@ -65,6 +66,7 @@ private:
     QColor getColorLilyWhite() const { return QColor(234, 237, 237); }
     QColor getColorFrostWhite() const { return QColor(244, 247, 249); }
     QColor getColorWhite() const { return QColor(255, 255, 255); }
+    QColor getColorBlack() const { return QColor(0, 0, 0); }
     QColor getColorViolentViolet() const { return QColor(54, 1, 102); }
     QColor getColorBluePurple() const { return QColor(144, 19, 254); }
     QColor getColorHavelockBlue() const { return QColor(74, 144, 226); }
